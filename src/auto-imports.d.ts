@@ -58,12 +58,16 @@ declare global {
   const useAttrs: typeof import('vue').useAttrs
   const useCssModule: typeof import('vue').useCssModule
   const useCssVars: typeof import('vue').useCssVars
+  const useGameInput: typeof import('./composables/useGameInput').useGameInput
+  const useGamePhysics: typeof import('./composables/useGamePhysics').useGamePhysics
   const useId: typeof import('vue').useId
+  const useIsometricProjection: typeof import('./composables/useIsometricProjection').useIsometricProjection
   const useLink: typeof import('vue-router/auto').useLink
   const useModel: typeof import('vue').useModel
   const usePhysics: typeof import('./composables/usePhysics').usePhysics
   const useRoute: typeof import('vue-router').useRoute
   const useRouter: typeof import('vue-router').useRouter
+  const useSceneManager: typeof import('./composables/useSceneManager').useSceneManager
   const useSlots: typeof import('vue').useSlots
   const useTemplateRef: typeof import('vue').useTemplateRef
   const watch: typeof import('vue').watch
@@ -77,8 +81,14 @@ declare global {
   export type { Component, Slot, Slots, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, ShallowRef, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
   import('vue')
   // @ts-ignore
+  export type { InputState } from './composables/useGameInput'
+  import('./composables/useGameInput')
+  // @ts-ignore
   export type { PhysicsOptions } from './composables/usePhysics'
   import('./composables/usePhysics')
+  // @ts-ignore
+  export type { GameEntity } from './composables/useSceneManager'
+  import('./composables/useSceneManager')
 }
 
 // for vue template auto import
@@ -138,12 +148,16 @@ declare module 'vue' {
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
+    readonly useGameInput: UnwrapRef<typeof import('./composables/useGameInput')['useGameInput']>
+    readonly useGamePhysics: UnwrapRef<typeof import('./composables/useGamePhysics')['useGamePhysics']>
     readonly useId: UnwrapRef<typeof import('vue')['useId']>
+    readonly useIsometricProjection: UnwrapRef<typeof import('./composables/useIsometricProjection')['useIsometricProjection']>
     readonly useLink: UnwrapRef<typeof import('vue-router/auto')['useLink']>
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
     readonly usePhysics: UnwrapRef<typeof import('./composables/usePhysics')['usePhysics']>
     readonly useRoute: UnwrapRef<typeof import('vue-router')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('vue-router')['useRouter']>
+    readonly useSceneManager: UnwrapRef<typeof import('./composables/useSceneManager')['useSceneManager']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>

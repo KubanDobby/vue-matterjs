@@ -4,6 +4,7 @@ import VueRouter from 'unplugin-vue-router/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import vueDevtools from 'vite-plugin-vue-devtools'
+import UnoCSS from 'unocss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -29,6 +30,7 @@ export default defineConfig({
       vueTemplate: true,
     }),
     vueDevtools(),
+    UnoCSS(),
     vue()
   ],
 })

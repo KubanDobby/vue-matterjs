@@ -6,23 +6,26 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "type-check": "vue-tsc -b"
   },
   "dependencies": {
     "@types/matter-js": "^0.20.2",
+    "@vitejs/plugin-legacy": "https://pkg.pr.new/vitejs/vite/@vitejs/plugin-legacy@8c8c56e",
+    "@vueuse/core": "^14.1.0",
     "matter-js": "^0.20.0",
     "vue": "^3.5.25",
-    "vue-router": "^4.6.3"
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
-    "@types/node": "^24.10.1",
-    "@vitejs/plugin-vue": "^6.0.2",
+    "@types/node": "^24.10.4",
+    "@vitejs/plugin-vue": "^6.0.3",
     "@vue/tsconfig": "^0.8.1",
     "typescript": "~5.9.3",
+    "unocss": "^66.5.10",
     "unplugin-auto-import": "^20.3.0",
-    "unplugin-vue-router": "^0.18.0",
-    "vite": "^7.2.6",
+    "unplugin-vue-router": "^0.19.1",
     "vite-plugin-vue-devtools": "^8.0.5",
-    "vue-tsc": "^3.1.5"
+    "vue-tsc": "^3.1.8"
   }
 }

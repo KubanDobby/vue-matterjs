@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import IsometricCanvas from '../components/PhysicsCanvas.vue'
+import GamePhysics from '../components/GamePhysics.vue';
+
 </script>
 
 <template>
-  <IsometricCanvas />
+  <GamePhysics />
 </template>
